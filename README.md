@@ -309,17 +309,67 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 
-16. If you get stuck — what to paste to me
+🧠 Django Project — GitHub Push Guide (with Token)
+🔹 1. Initialize Git
+git init
 
-When you face an error, paste these three things:
+🔹 2. Add All Files
+git add .
 
-sms/urls.py full content
+🔹 3. Commit Changes
+git commit -m "Initial Django project commit"
 
-The problematic app/urls.py (e.g., teachers/urls.py)
+🔹 4. Create Main Branch
+git branch -M main
 
-The exact terminal traceback / error message
+🔹 5. Add GitHub Remote Repository
+git remote add origin https://github.com/seher873/intial_code_djngo.git
 
-Main turant bata dunga/gi kya galat hai aur fix.
+🔐 Set Up GitHub Token (for authentication)
+
+Go to 👉 GitHub > Settings > Developer settings > Personal access tokens > Tokens (classic)
+
+Click "Generate new token (classic)"
+
+Select scopes:
+
+✅ repo
+
+✅ workflow
+
+✅ read:org
+
+Copy the generated token immediately (you won’t see it again).
+
+💻 Use Token While Pushing
+
+When you run:
+
+git push -u origin main
+
+
+Git will ask:
+
+Username for 'https://github.com': 
+
+
+➡ Enter your GitHub username (e.g., seher873)
+
+Then it will ask:
+
+Password for 'https://seher873@github.com':
+
+
+➡ Paste your personal access token instead of your password.
+
+✅ Done!
+
+Now your code will be uploaded to your GitHub repository successfully.
+For the next pushes, just run:
+
+git add .
+git commit -m "update message"
+git push
 
 
 
@@ -329,6 +379,3 @@ Main turant bata dunga/gi kya galat hai aur fix.
 
 
 
-
-#run comand..
-python manage.py runserver
